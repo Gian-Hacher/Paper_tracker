@@ -1,4 +1,4 @@
-name: paper-tracker-daily-digest
+name: paper-tracker-weekly-digest
 
 on:
   workflow_dispatch:
@@ -12,10 +12,10 @@ on:
         required: false
         default: "10"
   schedule:
-    - cron: "30 1 * * *"
+    - cron: "0 1 * * 1"
 
 jobs:
-  run-daily-digest:
+  run-weekly-digest:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -38,6 +38,5 @@ jobs:
       - name: Upload reports
         uses: actions/upload-artifact@v4
         with:
-          name: daily-reports
+          name: weekly-reports
           path: outputs/daily/*.md
-
