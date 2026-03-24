@@ -1,0 +1,24 @@
+recency:
+  window_days: 30
+  max_score: 40.0
+
+keyword:
+  max_hits: 6
+  max_score: 40.0
+
+source:
+  default_score: 10.0
+  source_scores:
+    arxiv: 20.0
+    openalex: 20.0
+
+weights:
+  recency_weight: 1.0
+  keyword_weight: 1.0
+  source_weight: 1.0
+
+# Reserved for future dimensions.
+future_scores:
+  venue_score: 0.0
+  citation_score: 0.0
+  code_score: 0.0

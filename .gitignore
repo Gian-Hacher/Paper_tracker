@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+
+# Tooling
+.pytest_cache/
+.mypy_cache/
+pytest-cache-files-*/
+
+# Local outputs and DB
+data/tracker.db
+outputs/daily/*.md
+outputs/weekly/*.md

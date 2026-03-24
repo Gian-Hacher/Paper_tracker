@@ -1,0 +1,33 @@
+include_keywords:
+  - embodied ai
+  - embodied intelligence
+  - robot manipulation
+  - manipulation
+  - robot grasping
+  - dexterous manipulation
+  - vision-language-action
+  - vla
+  - policy learning
+  - imitation learning
+  - diffusion policy
+  - mobile manipulation
+  - long-horizon manipulation
+  - robot sim2real
+  - robot learning
+  - robot assemble
+  - robot construction
+  - robot skill learning
+  - automated construction
+  - robot fabrication
+  - policy learning
+  - long-horizon manipulation
+
+exclude_keywords:
+  - autonomous driving
+  - medical imaging
+  - networking
+  - non-robotic control
+  - slam-only
+  - pure slam
+  - llm-only
+  - language model only

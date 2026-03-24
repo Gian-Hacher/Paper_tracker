@@ -1,0 +1,123 @@
+conferences:
+  - canonical_name: "IEEE International Conference on Computer Vision"
+    aliases: ["ICCV", "IEEE ICCV", "International Conference on Computer Vision"]
+    tier: "first"
+    type: "conference"
+  - canonical_name: "European Conference on Computer Vision"
+    aliases: ["ECCV", "European Conference on Computer Vision"]
+    tier: "first"
+    type: "conference"
+  - canonical_name: "IEEE Conference on Computer Vision and Pattern Recognition"
+    aliases: ["CVPR", "IEEE CVPR", "Computer Vision and Pattern Recognition"]
+    tier: "first"
+    type: "conference"
+  - canonical_name: "Robotics: Science and Systems"
+    aliases: ["RSS", "Robotics Science and Systems"]
+    tier: "first"
+    type: "conference"
+  - canonical_name: "IEEE International Conference on Robotics and Automation"
+    aliases: ["ICRA", "IEEE ICRA", "International Conference on Robotics and Automation"]
+    tier: "first"
+    type: "conference"
+  - canonical_name: "IEEE/RSJ International Conference on Intelligent Robots and Systems"
+    aliases: ["IROS", "IEEE RSJ IROS", "Intelligent Robots and Systems"]
+    tier: "first"
+    type: "conference"
+  - canonical_name: "IEEE International Conference on Robotics and Biomimetics"
+    aliases: ["ROBIO", "IEEE ROBIO", "Robotics and Biomimetics"]
+    tier: "second"
+    type: "conference"
+  - canonical_name: "IEEE International Conference on Real-time Computing and Robotics"
+    aliases: ["RCAR", "IEEE RCAR", "Real-time Computing and Robotics"]
+    tier: "second"
+    type: "conference"
+  - canonical_name: "International Conference on Advanced Robotics"
+    aliases: ["ICAR", "Advanced Robotics Conference"]
+    tier: "second"
+    type: "conference"
+  - canonical_name: "IEEE International Conference on CYBER Technology in Automation, Control, and Intelligent Systems"
+    aliases: ["IEEE-CYBER", "CYBER", "IEEE CYBER"]
+    tier: "second"
+    type: "conference"
+  - canonical_name: "IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems"
+    aliases: ["MFI", "Multisensor Fusion and Integration"]
+    tier: "second"
+    type: "conference"
+  - canonical_name: "IEEE International Conference on Advanced Intelligent Mechatronics"
+    aliases: ["AIM", "IEEE AIM", "Advanced Intelligent Mechatronics"]
+    tier: "second"
+    type: "conference"
+  - canonical_name: "IEEE-RAS International Conference on Humanoid Robots"
+    aliases: ["Humanoids", "Humanoid Robots", "IEEE RAS Humanoids"]
+    tier: "second"
+    type: "conference"
+
+journals:
+  - canonical_name: "IEEE Transactions on Pattern Analysis and Machine Intelligence"
+    aliases: ["T-PAMI", "TPAMI", "PAMI", "IEEE TPAMI"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "International Journal of Computer Vision"
+    aliases: ["IJCV"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Transactions on Image Processing"
+    aliases: ["T-IP", "TIP", "IEEE TIP"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Transactions on Cybernetics"
+    aliases: ["T-CYB", "TCYB", "IEEE TCYB"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Transactions on Robotics"
+    aliases: ["T-RO", "TRO", "IEEE TRO"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "The International Journal of Robotics Research"
+    aliases: ["IJRR", "International Journal of Robotics Research"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "Journal of Field Robotics"
+    aliases: ["JFR"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Robotics & Automation Magazine"
+    aliases: ["RA-M", "RAM", "IEEE RAM", "IEEE Robotics and Automation Magazine"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE/ASME Transactions on Mechatronics"
+    aliases: ["T-MECH", "TMECH", "IEEE ASME Mechatronics"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Transactions on Automation Science and Engineering"
+    aliases: ["T-ASE", "TASE", "IEEE TASE"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "Robotics and Computer-Integrated Manufacturing"
+    aliases: ["RCIM"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Transactions on Circuits and Systems for Video Technology"
+    aliases: ["T-CSVT", "TCSVT", "IEEE TCSVT"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "IEEE Robotics and Automation Letters"
+    aliases: ["RA-L", "RAL", "IEEE RAL"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "Science Robotics"
+    aliases: ["Sci. Robot.", "Sci Robot", "Sci Robotics"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "Robotics and Autonomous Systems"
+    aliases: ["RAS"]
+    tier: "second"
+    type: "journal"
+  - canonical_name: "Autonomous Robots"
+    aliases: ["AURO"]
+    tier: "second"
+    type: "journal"
+  - canonical_name: "Swarm Intelligence"
+    aliases: []
+    tier: "second"
+    type: "journal"

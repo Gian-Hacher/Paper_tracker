@@ -1,0 +1,18 @@
+arxiv:
+  enabled: false
+  endpoint: "http://export.arxiv.org/api/query"
+  categories:
+    - cs.RO
+    - cs.AI
+    - cs.CV
+  max_results: 200
+  timeout_seconds: 20
+
+openalex:
+  enabled: true
+  works_endpoint: "https://api.openalex.org/works"
+  sources_endpoint: "https://api.openalex.org/sources"
+  works_per_page: 100
+  source_lookup_per_page: 8
+  timeout_seconds: 100
+  mailto: ""
