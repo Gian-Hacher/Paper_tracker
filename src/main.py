@@ -14,9 +14,8 @@ if __package__ is None or __package__ == "":
 from src.fetchers.arxiv_fetcher import ArxivFetcher
 from src.fetchers.openalex_fetcher import OpenAlexFetcher
 from src.processors.dedup import deduplicate_papers
-from src.processors.filter import filter_papers
 from src.processors.normalize import normalize_paper
-from src.processors.score import score_papers
+from src.processors.select import select_top_papers
 from src.processors.venue_filter import filter_and_annotate_by_venue
 from src.renderers.markdown_report import write_daily_report
 from src.storage.sqlite_store import SQLitePaperStore
@@ -33,7 +32,7 @@ def load_yaml(path: str) -> dict:
 
 def run_pipeline(
     days_back: int = 365,
-    top_n: int = 10,
+    top_n: int = 20,
     project_root: str = ".",
 ) -> dict[str, str | int]:
     project_path = Path(project_root)
@@ -76,21 +75,17 @@ def run_pipeline(
     normalized = [normalize_paper(paper) for paper in fetched]
     deduped = deduplicate_papers(normalized)
     venue_filtered = filter_and_annotate_by_venue(deduped, venue_matcher)
-    filtered = filter_papers(
+    strict_filtered, relaxed_filtered, top_papers = select_top_papers(
         papers=venue_filtered,
         include_keywords=keywords_cfg.get("include_keywords", []),
         exclude_keywords=keywords_cfg.get("exclude_keywords", []),
+        scoring_config=scoring_cfg,
+        top_n=top_n,
     )
-    scored = score_papers(filtered, scoring_cfg)
 
     db_path = project_path / "data" / "tracker.db"
     store = SQLitePaperStore(str(db_path))
-    inserted_count = store.insert_papers(scored)
-    top_papers = sorted(
-        scored,
-        key=lambda p: (p.total_score, p.published_date),
-        reverse=True,
-    )[:top_n]
+    inserted_count = store.insert_papers(relaxed_filtered)
 
     report_path = write_daily_report(
         papers=top_papers,
@@ -101,7 +96,9 @@ def run_pipeline(
         "fetched": len(fetched),
         "deduped": len(deduped),
         "venue_filtered": len(venue_filtered),
-        "filtered": len(filtered),
+        "filtered": len(strict_filtered),
+        "relaxed_filtered": len(relaxed_filtered),
+        "selected": len(top_papers),
         "inserted": inserted_count,
         "report_path": report_path,
     }
@@ -121,4 +118,3 @@ if __name__ == "__main__":
     setup_logger()
     args = parse_args()
     run_pipeline(days_back=args.days_back, top_n=args.top_n, project_root=args.project_root)
-#python d:\Project\Paper_tracker\src\main.py --project-root d:\Project\Paper_tracker --days-back 100 --top-n 10

@@ -10,7 +10,7 @@ on:
       top_n:
         description: "Top N papers in report"
         required: false
-        default: "10"
+        default: "20"
   schedule:
     - cron: "0 1 * * 1"
 
@@ -36,7 +36,7 @@ jobs:
         run: >
           python -m src.main
           --days-back ${{ github.event.inputs.days_back || '7' }}
-          --top-n ${{ github.event.inputs.top_n || '10' }}
+          --top-n ${{ github.event.inputs.top_n || '20' }}
 
       - name: Locate generated report
         id: report

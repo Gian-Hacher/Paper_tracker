@@ -29,7 +29,7 @@ pip install -r requirements.txt
 在项目根目录 `Paper_tracker` 下执行：
 
 ```bash
-python -m src.main --days-back 365 --top-n 10
+python -m src.main --days-back 365 --top-n 20
 ```
 
 运行后会产生：
