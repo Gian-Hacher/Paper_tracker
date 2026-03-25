@@ -79,7 +79,6 @@ def render_release_summary_markdown(
         f"Total selected papers: **{len(papers)}**",
         "",
     ]
-    lines.extend(_render_venue_stats(venue_stats))
 
     for index, paper in enumerate(papers, start=1):
         lines.extend(
@@ -88,8 +87,6 @@ def render_release_summary_markdown(
                 f"- Authors: {', '.join(paper.authors) if paper.authors else 'N/A'}",
                 f"- Published: {_format_display_date(paper.published_date)}",
                 f"- Venue: {paper.venue_name or paper.venue_raw or 'Unknown'}",
-                "- Abstract:",
-                paper.abstract or "N/A",
                 "",
             ]
         )

@@ -39,8 +39,8 @@ def test_release_summary_contains_only_brief_fields() -> None:
     assert "2026-03-24" in summary
     assert "2026-03-24T00:00:00+00:00" not in summary
     assert "Science Robotics" in summary
-    assert "Detailed abstract." in summary
-    assert "fetched=3, filtered=1" in summary
+    assert "Detailed abstract." not in summary
+    assert "fetched=3, filtered=1" not in summary
     assert "tier=" not in summary
     assert "Score Breakdown" not in summary
 
