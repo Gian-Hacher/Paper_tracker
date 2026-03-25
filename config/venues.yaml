@@ -11,6 +11,10 @@ conferences:
     aliases: ["CVPR", "IEEE CVPR", "Computer Vision and Pattern Recognition"]
     tier: "first"
     type: "conference"
+  - canonical_name: "Conference on Neural Information Processing Systems"
+    aliases: ["NeurIPS", "NIPS", "NeuralIPS", "Neural Information Processing Systems"]
+    tier: "first"
+    type: "conference"
   - canonical_name: "Robotics: Science and Systems"
     aliases: ["RSS", "Robotics Science and Systems"]
     tier: "first"
@@ -67,6 +71,14 @@ journals:
     type: "journal"
   - canonical_name: "IEEE Transactions on Cybernetics"
     aliases: ["T-CYB", "TCYB", "IEEE TCYB"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "Nature Communications"
+    aliases: ["Nat Commun"]
+    tier: "first"
+    type: "journal"
+  - canonical_name: "Nature Machine Intelligence"
+    aliases: ["Nat Mach Intell"]
     tier: "first"
     type: "journal"
   - canonical_name: "IEEE Transactions on Robotics"
