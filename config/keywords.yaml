@@ -1,4 +1,7 @@
 include_keywords:
+  - assembly
+  - TAMP
+  - planning
   - embodied ai
   - embodied intelligence
   - robot manipulation
@@ -21,7 +24,12 @@ include_keywords:
   - robot fabrication
   - policy learning
   - long-horizon manipulation
-
+  - assembly planning
+  - trajectory prediction
+  - trajectory planning
+  - skill chaining
+  - action model
+  - world model
 exclude_keywords:
   - autonomous driving
   - medical imaging
