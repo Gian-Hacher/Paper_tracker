@@ -72,7 +72,7 @@ def render_release_summary_markdown(
     report_date = report_date or datetime.now()
     date_text = report_date.strftime("%Y-%m-%d")
     lines: list[str] = [
-        f"# Paper Tracker Weekly Summary ({date_text})",
+        f"# Paper Tracker Weekly Report ({date_text})",
         "",
         f"Total selected papers: **{len(papers)}**",
         "",

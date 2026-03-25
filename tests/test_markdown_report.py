@@ -33,6 +33,7 @@ def test_release_summary_contains_only_brief_fields() -> None:
         venue_stats=[{"venue": "Science Robotics", "fetched_count": 3, "filtered_count": 1}],
     )
 
+    assert "Paper Tracker Weekly Report" in summary
     assert "A Robotics Paper" in summary
     assert "Alice, Bob" in summary
     assert "2026-03-24T00:00:00+00:00" in summary
