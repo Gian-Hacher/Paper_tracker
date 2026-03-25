@@ -69,10 +69,8 @@ def render_release_summary_markdown(
     report_date: datetime | None = None,
     venue_stats: list[dict[str, int | str]] | None = None,
 ) -> str:
-    report_date = report_date or datetime.now()
-    date_text = report_date.strftime("%Y-%m-%d")
     lines: list[str] = [
-        f"# Paper Tracker Weekly Report ({date_text})",
+        "## Selected Papers",
         "",
         f"Total selected papers: **{len(papers)}**",
         "",

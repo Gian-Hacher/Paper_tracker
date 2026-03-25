@@ -78,8 +78,6 @@ jobs:
           cp "$REPORT" "$ASSET_FILE"
 
           {
-            echo "# ${TITLE}"
-            echo
             echo "- Report date: ${REPORT_DATE}"
             echo "- Attached file: paper-tracker-weekly-report.md"
             echo
