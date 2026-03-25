@@ -123,3 +123,37 @@ def write_release_summary(
         encoding="utf-8",
     )
     return str(output_file)
+
+
+def write_candidate_titles_report(
+    papers: list[Paper],
+    output_dir: str,
+    report_date: datetime | None = None,
+) -> str:
+    report_date = report_date or datetime.now()
+    Path(output_dir).mkdir(parents=True, exist_ok=True)
+    output_file = Path(output_dir) / f"candidate-titles-{report_date.strftime('%Y-%m-%d')}.md"
+
+    output_file.write_text(
+        render_candidate_titles_markdown(papers, report_date),
+        encoding="utf-8",
+    )
+    return str(output_file)
+
+
+def render_candidate_titles_markdown(
+    papers: list[Paper],
+    report_date: datetime | None = None,
+) -> str:
+    report_date = report_date or datetime.now()
+    lines: list[str] = [
+        f"# Candidate Titles Before Keyword Filtering ({report_date.strftime('%Y-%m-%d')})",
+        "",
+        f"Total candidates: **{len(papers)}**",
+        "",
+    ]
+
+    for index, paper in enumerate(papers, start=1):
+        lines.append(f"{index}. {paper.title}")
+
+    return "\n".join(lines)

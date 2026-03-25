@@ -18,7 +18,11 @@ from src.processors.normalize import normalize_paper
 from src.processors.select import select_top_papers
 from src.processors.stats import build_venue_stats
 from src.processors.venue_filter import filter_and_annotate_by_venue
-from src.renderers.markdown_report import write_daily_report, write_release_summary
+from src.renderers.markdown_report import (
+    write_candidate_titles_report,
+    write_daily_report,
+    write_release_summary,
+)
 from src.storage.sqlite_store import SQLitePaperStore
 from src.utils.logging_utils import setup_logger
 from src.utils.venue_utils import VenueMatcher
@@ -99,6 +103,10 @@ def run_pipeline(
         output_dir=str(project_path / "outputs" / "weekly"),
         venue_stats=venue_stats,
     )
+    candidate_titles_path = write_candidate_titles_report(
+        papers=venue_filtered,
+        output_dir=str(project_path / "outputs" / "weekly"),
+    )
 
     result = {
         "fetched": len(fetched),
@@ -110,6 +118,7 @@ def run_pipeline(
         "inserted": inserted_count,
         "report_path": report_path,
         "release_summary_path": release_summary_path,
+        "candidate_titles_path": candidate_titles_path,
     }
     logger.info("Pipeline finished: %s", result)
     return result
