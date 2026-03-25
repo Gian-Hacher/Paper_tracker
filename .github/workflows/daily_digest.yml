@@ -46,13 +46,15 @@ jobs:
           SUMMARY_PATH="$(ls -1 outputs/weekly/weekly-summary-*.md | sort | tail -n 1)"
           REPORT_FILE="$(basename "$REPORT_PATH")"
           REPORT_DATE="${REPORT_FILE%.md}"
-          RELEASE_TAG="weekly-report-latest"
+          ISO_WEEK="$(date -u +'%G-W%V')"
+          RELEASE_TAG="weekly-report-${ISO_WEEK}"
           RELEASE_TITLE="Paper Tracker Weekly Report - ${REPORT_DATE}"
 
           echo "report_path=${REPORT_PATH}" >> "$GITHUB_OUTPUT"
           echo "summary_path=${SUMMARY_PATH}" >> "$GITHUB_OUTPUT"
           echo "report_file=${REPORT_FILE}" >> "$GITHUB_OUTPUT"
           echo "report_date=${REPORT_DATE}" >> "$GITHUB_OUTPUT"
+          echo "iso_week=${ISO_WEEK}" >> "$GITHUB_OUTPUT"
           echo "release_tag=${RELEASE_TAG}" >> "$GITHUB_OUTPUT"
           echo "release_title=${RELEASE_TITLE}" >> "$GITHUB_OUTPUT"
 
